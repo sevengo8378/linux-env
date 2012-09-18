@@ -3,3 +3,4 @@
 [alias]
 	ci = commit
 	st = status
+	br = branch
