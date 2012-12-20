@@ -4,3 +4,6 @@
 	ci = commit
 	st = status
 	br = branch
+[user]
+	name = byrne.liang
+	email = byrne.liang@saybot.com
