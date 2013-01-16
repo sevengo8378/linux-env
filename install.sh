@@ -14,6 +14,9 @@ cp $cwd/gitconfig $HOME/.gitconfig
 echo "cp $cwd/tmux.config $HOME/.tmux.conf"
 cp $cwd/tmux.config $HOME/.tmux.conf
 
+echo "cp $cwd/zshrc $HOME/.zshrc"
+cp $cwd/zshrc $HOME/.zshrc
+
 #echo "install hosts to /etc/hosts"
 #sudo cp /etc/hosts{,_bak} 
 #sudo cp $cwd/hosts /etc/hosts
