@@ -20,3 +20,6 @@ cp $cwd/zshrc $HOME/.zshrc
 #echo "install hosts to /etc/hosts"
 #sudo cp /etc/hosts{,_bak} 
 #sudo cp $cwd/hosts /etc/hosts
+
+is_mac=`uname | grep Darwin`
+[ -n $is_mac ] && cp $cwd/show-hide-files ~/bin/
