@@ -1,5 +1,6 @@
 #!/bin/bash
 
+is_mac=`uname | grep Darwin`
 cwd=`pwd`
 
 # clone some git repositories to $HOME
@@ -24,12 +25,14 @@ cp $cwd/tmux.config $HOME/.tmux.conf
 echo "cp $cwd/zshrc $HOME/.zshrc"
 cp $cwd/zshrc $HOME/.zshrc
 
+# install personal scripts to $HOME/bin, which is added to $PATH
+mkdir -p $HOME/bin
+cp $cwd/gfw $HOME/bin/
+[ -n $is_mac ] && cp $cwd/show-hide-files $HOME/bin/
+
 #echo "install hosts to /etc/hosts"
 #sudo cp /etc/hosts{,_bak} 
 #sudo cp $cwd/hosts /etc/hosts
-
-is_mac=`uname | grep Darwin`
-[ -n $is_mac ] && cp $cwd/show-hide-files ~/bin/
 
 cd $HOME
 # switch shell to zsh
