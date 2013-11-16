@@ -3,7 +3,9 @@
 [alias]
 	ci = commit
 	st = status
-	br = branch
+    br = branch
+    co = checkout
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%cN' --abbrev-commit --date=relative
 [user]
 	name = byrne.liang
 	email = byrne.liang@saybot.com
