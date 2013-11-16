@@ -1,4 +1,4 @@
 #!/bin/bash
 
-#ssh -D7070 byrne@96.44.156.91
-ssh -D7070 byrne@198.55.102.83
+#ssh -D7070 byrne@198.55.102.83
+ssh -D7070 byrne@106.186.118.77
