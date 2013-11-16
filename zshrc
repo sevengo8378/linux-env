@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jonathan-byrne"
+ZSH_THEME="jonathan"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -15,7 +15,7 @@ ZSH_THEME="jonathan-byrne"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -30,6 +30,10 @@ ZSH_THEME="jonathan-byrne"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(ant bundler cap gem git-flow git github python rails rails3 rake ruby rvm svn vi-mode vundle)
+
+# fix bundle error bug, move rvm before source $ZSH/oh-my-zsh.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,8 +129,6 @@ export VISUAL=vi
 export EDITOR=vi
 export SVN_EDITOR=vi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export FLEX_HOME="/Applications/Adobe Flash Builder 4.7/sdks/4.6.0"
 export FLEX_SDK_BIN="$FLEX_HOME/bin"
