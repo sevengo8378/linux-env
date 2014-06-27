@@ -1,5 +1,5 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -11,33 +11,74 @@ ZSH_THEME="jonathan"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set to this to use case-sensitive completion
+# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
+# Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
-# Uncomment following line if you want to disable colors in ls
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# Uncomment the following line to disable auto-setting terminal title.
+DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment the following line to disable command auto-correction.
+# DISABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(ant bundler cap gem git-flow git github python rails rails3 rake ruby rvm svn vi-mode vundle)
-
-# fix bundle error bug, move rvm before source $ZSH/oh-my-zsh.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# User configuration
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+#
+#################### oh my zsh #############################################################################################
+
+# ruby
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
+export PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+IRBRC=$HOME/.irbrc
 
 #关于历史纪录的配置
 # number of lines kept in history
@@ -97,6 +138,8 @@ zstyle ':completion:*:descriptions' format $'\e[01;33m -- %d --\e[0m'
 zstyle ':completion:*:messages' format $'\e[01;35m -- %d --\e[0m'
 zstyle ':completion:*:warnings' format $'\e[01;31m -- No Matches Found --\e[0m'
 
+
+############################################ ALIAS ##############################################################################
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -113,6 +156,7 @@ alias lsS='ls -lShr'
 alias lst='ls -ltr'
 alias less='less -R'
 
+# tmux
 export TERM=xterm-256color
 alias tm='TERM=xterm-256color tmux -2'
 alias tn='tm new -s'
@@ -120,26 +164,36 @@ alias tl='tm ls'
 alias ta='tm attach'
 alias tt='tm attach -t'
 
+# less
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+alias more='less'
 
-# path alias
-#hash -d PROJECTS="/Users/byrne//project"
-
+########################################## Others ########################################################################
 # Customize to your needs...
 export VISUAL=vi
 export EDITOR=vi
 export SVN_EDITOR=vi
 
-
-export FLEX_HOME="/Applications/Adobe Flash Builder 4.7/sdks/4.6.0"
+# flash related
+export ASHOLE_HOME=$HOME/.ashole
+export PATH=$ASHOLE_HOME/bin:$PATH
+export FLEX_HOME=$ASHOLE_HOME/saybot/sdk/flex
 export FLEX_SDK_BIN="$FLEX_HOME/bin"
+export ANT_OPTS="-Dfile.encoding=UTF-8"
 
-#COCOS2D_HOME=~/cocos2d
-#ANDROID_SDK_HOME=$COCOS2D_HOME/andriod-sdk-linux
-#export PATH=${PATH}:${ANDROID_SDK_HOME}/tools:${ANDROID_SDK_HOME}/platform-tools:${COCOS2D_HOME}/cocos2d-ndk/bin:${COCOS2D_HOME}/cocos2d-ndk/libexec/gcc/arm-linux-androideabi/4.4.3
+export PATH=$HOME/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
 
-PATH=$PATH:$HOME/bin:/usr/local/mysql/bin
-IRBRC=$HOME/.irbrc
+#android
+export ANDROID_SDK_HOME=$HOME/.android-sdk-macosx
+export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools
+export PHONEGAP_HOME=$HOME/tools/phonegap
+export PATH=$PATH:$PHONEGAP_HOME/lib/android/bin
 
 set -o emacs
 #set -o vi
 
+# CLI http and https proxy
+#export http_proxy=106.186.118.77:3128
+#export https_proxy=106.186.118.77:3128
