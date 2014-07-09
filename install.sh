@@ -45,3 +45,10 @@ chsh -s /bin/zsh
 
 # install homebrew
 #ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
+echo "copy mm.cfg to "
+if [ -n $is_mac ];then
+    cp mm.cfg "/Library/Application Support/Macromedia/"
+else
+    cp mm.cfg "c:\Users\username"
+fi
