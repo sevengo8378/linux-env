@@ -170,11 +170,20 @@ export LESS=" -R "
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
+# diffmerge
+alias diffmerge='/Applications/DiffMerge.app/Contents/MacOS/DiffMerge'
+
 ########################################## Others ########################################################################
 # Customize to your needs...
 export VISUAL=vi
 export EDITOR=vi
 export SVN_EDITOR=vi
+
+set -o emacs
+#set -o vi
+
+# homebrew
+export PATH=/usr/local/sbin:$PATH
 
 # flash related
 export ASHOLE_HOME=$HOME/.ashole
@@ -182,17 +191,24 @@ export PATH=$ASHOLE_HOME/bin:$PATH
 export FLEX_HOME=$ASHOLE_HOME/saybot/sdk/flex
 export FLEX_SDK_BIN="$FLEX_HOME/bin"
 export ANT_OPTS="-Dfile.encoding=UTF-8"
+export AIR_SDK_HOME=$ASHOLE_HOME/saybot/sdk/air
+export PATH=$PATH:$AIR_SDK_HOME/bin
 
 export PATH=$HOME/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
 
 #android
 export ANDROID_SDK_HOME=$HOME/.android-sdk-macosx
 export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools
+export ANDROID_NDK_HOME=$HOME/android-ndk
+export PATH=$PATH:$ANDROID_NDK_HOME
 export PHONEGAP_HOME=$HOME/tools/phonegap
 export PATH=$PATH:$PHONEGAP_HOME/lib/android/bin
 
-set -o emacs
-#set -o vi
+# JAVA
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+export JAVA_OPTS="-Dfile.encoding=UTF-8"
+export ANT_OPTS="-Dfile.encoding=UTF-8"
+
 
 # CLI http and https proxy
 #export http_proxy=106.186.118.77:3128
