@@ -31,8 +31,8 @@ cp $cwd/gfw $HOME/bin/
 [ -n $is_mac ] && cp $cwd/show-hide-files $HOME/bin/
 
 # repo
-curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > $HOME/bin/repo
-chmod a+x $HOME/bin/repo
+#curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > $HOME/bin/repo
+#chmod a+x $HOME/bin/repo
 
 #echo "install hosts to /etc/hosts"
 #sudo cp /etc/hosts{,_bak} 
