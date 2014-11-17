@@ -5,7 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jonathan"
+#ZSH_THEME="jonathan"
+ZSH_THEME="robbyrussell"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -173,6 +174,9 @@ alias more='less'
 # diffmerge
 alias diffmerge='/Applications/DiffMerge.app/Contents/MacOS/DiffMerge'
 
+# proxy
+alias proxyon='export http_proxy=106.186.118.77:3128 && export https_proxy=106.186.118.77:3128 && echo cli http proxy on'
+alias proxyoff='unset http_proxy && unset https_proxy && echo cli http proxy off'
 ########################################## Others ########################################################################
 # Customize to your needs...
 export VISUAL=vi
@@ -209,7 +213,3 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 export ANT_OPTS="-Dfile.encoding=UTF-8"
 
-
-# CLI http and https proxy
-#export http_proxy=106.186.118.77:3128
-#export https_proxy=106.186.118.77:3128
