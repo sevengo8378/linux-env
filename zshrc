@@ -176,7 +176,7 @@ alias more='less'
 alias diffmerge='/Applications/DiffMerge.app/Contents/MacOS/DiffMerge'
 
 # proxy
-alias proxyon='export http_proxy=106.186.118.77:3128 && export https_proxy=106.186.118.77:3128 && echo cli http proxy on'
+alias proxyon='export http_proxy=106.186.118.77:7128 && export https_proxy=106.186.118.77:7128 && echo cli http proxy on'
 alias proxyoff='unset http_proxy && unset https_proxy && echo cli http proxy off'
 ########################################## Others ########################################################################
 # Customize to your needs...
