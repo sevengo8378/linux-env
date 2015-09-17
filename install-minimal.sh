@@ -27,6 +27,6 @@ cp $cwd/zshrc $HOME/.zshrc
 
 cd $HOME
 # switch shell to zsh
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh `whoami`
 . $HOME/.zshrc
 
