@@ -214,3 +214,7 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 export ANT_OPTS="-Dfile.encoding=UTF-8"
 
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
