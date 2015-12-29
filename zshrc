@@ -210,7 +210,7 @@ export PHONEGAP_HOME=$HOME/tools/phonegap
 export PATH=$PATH:$PHONEGAP_HOME/lib/android/bin
 
 # JAVA
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 export ANT_OPTS="-Dfile.encoding=UTF-8"
 
