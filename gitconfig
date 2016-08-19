@@ -5,7 +5,7 @@
 	st = status
     br = branch
     co = checkout
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%cN' --abbrev-commit --date=relative
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ai)%C(cyan)(%cr)%Creset %C(magenta)%cN' --abbrev-commit
 [user]
 	name = byrne.liang
 	email = byrne.liang@saybot.com
