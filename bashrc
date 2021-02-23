@@ -99,20 +99,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
-
-export FLEX_HOME=/ssd/tools/sdk4.6.0
-export FLEX_SDK_BIN=$FLEX_HOME/bin 
-
-#COCOS2D_HOME=~/cocos2d
-#ANDROID_SDK_HOME=$COCOS2D_HOME/andriod-sdk-linux
-#export PATH=${PATH}:${ANDROID_SDK_HOME}/tools:${ANDROID_SDK_HOME}/platform-tools:${COCOS2D_HOME}/cocos2d-ndk/bin:${COCOS2D_HOME}/cocos2d-ndk/libexec/gcc/arm-linux-androideabi/4.4.3
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/bin
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 IRBRC=$HOME/.irbrc
 
 export SVN_EDITOR=vi

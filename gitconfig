@@ -8,4 +8,4 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ai)%C(cyan)(%cr)%Creset %C(magenta)%cN' --abbrev-commit
 [user]
 	name = byrne.liang
-	email = byrne.liang@saybot.com
+	email = byrne.liang@alo7.com

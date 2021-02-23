@@ -77,11 +77,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #
 #################### oh my zsh #############################################################################################
 
-# ruby
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
-export PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-IRBRC=$HOME/.irbrc
-
 #关于历史纪录的配置
 # number of lines kept in history
 export HISTSIZE=10000
@@ -176,8 +171,9 @@ alias more='less'
 alias diffmerge='/Applications/DiffMerge.app/Contents/MacOS/DiffMerge'
 
 # proxy
-alias proxyon='export http_proxy=106.186.118.77:7128 && export https_proxy=106.186.118.77:7128 && echo cli http proxy on'
-alias proxyoff='unset http_proxy && unset https_proxy && echo cli http proxy off'
+#alias proxyon='export http_proxy=106.186.118.77:7128 && export https_proxy=106.186.118.77:7128 && echo cli http proxy on'
+#alias proxyoff='unset http_proxy && unset https_proxy && echo cli http proxy off'
+
 ########################################## Others ########################################################################
 # Customize to your needs...
 export VISUAL=vi
@@ -187,34 +183,31 @@ export SVN_EDITOR=vi
 set -o emacs
 #set -o vi
 
-# homebrew
-export PATH=/usr/local/sbin:$PATH
-
 # flash related
-export ASHOLE_HOME=$HOME/.ashole
-export PATH=$ASHOLE_HOME/bin:$PATH
-export FLEX_HOME=$ASHOLE_HOME/saybot/sdk/flex
-export FLEX_SDK_BIN="$FLEX_HOME/bin"
-export ANT_OPTS="-Dfile.encoding=UTF-8"
-export AIR_SDK_HOME=$ASHOLE_HOME/saybot/sdk/air
-export PATH=$PATH:$AIR_SDK_HOME/bin
+#export ASHOLE_HOME=$HOME/.ashole
+#export PATH=$ASHOLE_HOME/bin:$PATH
+#export FLEX_HOME=$ASHOLE_HOME/saybot/sdk/flex
+#export FLEX_SDK_BIN="$FLEX_HOME/bin"
+#export ANT_OPTS="-Dfile.encoding=UTF-8"
+#export AIR_SDK_HOME=$ASHOLE_HOME/saybot/sdk/air
+#export PATH=$PATH:$AIR_SDK_HOME/bin
 
-export PATH=$HOME/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/mysql/bin:/usr/local/bin:$PATH
 
 #android
-export ANDROID_SDK_HOME=$HOME/.android-sdk-macosx
-export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools
-export ANDROID_NDK_HOME=$HOME/android-ndk
-export PATH=$PATH:$ANDROID_NDK_HOME
-export PHONEGAP_HOME=$HOME/tools/phonegap
-export PATH=$PATH:$PHONEGAP_HOME/lib/android/bin
+#export ANDROID_SDK_HOME=$HOME/.android-sdk-macosx
+#export PATH=$PATH:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools
+#export ANDROID_NDK_HOME=$HOME/android-ndk
+#export PATH=$PATH:$ANDROID_NDK_HOME
+#export PHONEGAP_HOME=$HOME/tools/phonegap
+#export PATH=$PATH:$PHONEGAP_HOME/lib/android/bin
 
 # JAVA
-export JAVA_HOME=$(/usr/libexec/java_home)
-export JAVA_OPTS="-Dfile.encoding=UTF-8"
-export ANT_OPTS="-Dfile.encoding=UTF-8"
+#export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_OPTS="-Dfile.encoding=UTF-8"
+#export ANT_OPTS="-Dfile.encoding=UTF-8"
 
 # nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
+#export NVM_DIR=~/.nvm
+#source $(brew --prefix nvm)/nvm.sh
+#export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
