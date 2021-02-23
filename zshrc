@@ -211,3 +211,10 @@ set -o emacs
 #export NVM_DIR=~/.nvm
 #source $(brew --prefix nvm)/nvm.sh
 #export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
+
+# rvm
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.dd RVM to PATH for scripting. Make sure this is the last PATH variable change.
+if [[ -s $HOME/.rvm/scripts/rvm ]]; then
+  source $HOME/.rvm/scripts/rvm;
+  export PATH="$PATH:$HOME/.rvm/bin"
+fi

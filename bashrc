@@ -99,7 +99,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# rvm
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.dd RVM to PATH for scripting. Make sure this is the last PATH variable change.
+if [[ -s $HOME/.rvm/scripts/rvm ]]; then
+  source $HOME/.rvm/scripts/rvm;
+  export PATH="$PATH:$HOME/.rvm/bin"
+fi
 IRBRC=$HOME/.irbrc
 
 export SVN_EDITOR=vi
