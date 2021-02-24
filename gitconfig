@@ -9,3 +9,5 @@
 [user]
 	name = byrne.liang
 	email = byrne.liang@alo7.com
+[core]
+	quotepath = false
